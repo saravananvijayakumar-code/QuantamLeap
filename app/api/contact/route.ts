@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     const { error } = await resend.emails.send({
-      from: "Quantum Leap Ventures <onboarding@resend.dev>",
+      from: "Quantum Leap Ventures <quantamleap@granoosla.resend.app>",
       to: contactEmail,
       subject: `New contact from ${body.name.trim()}`,
       text: [
@@ -63,9 +63,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend error:", JSON.stringify(error));
       return NextResponse.json(
-        { error: "Failed to send message. Please try again." },
+        { error: `Failed to send: ${error.message || JSON.stringify(error)}` },
         { status: 500 }
       );
     }
