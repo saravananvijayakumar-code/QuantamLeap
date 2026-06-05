@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const contactEmail = process.env.CONTACT_EMAIL || "saravanan@quantumleapventures.com.au";
+    const contactEmail = process.env.CONTACT_EMAIL || "saravananvijayakumar@quantumleapventures.com.au";
 
     // Send email via Resend
     const { error } = await resend.emails.send({
