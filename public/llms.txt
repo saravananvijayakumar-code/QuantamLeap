@@ -1,0 +1,45 @@
+# Quantum Leap Ventures
+
+> AI-native software development studio specializing in shipping production-ready, LLM-powered web applications.
+
+## About
+
+Quantum Leap Ventures is a software company founded by Saravanan Vijayakumar. We specialize in Vibe Coding — using Claude, OpenAI, and Gemini as core development tools to move fast and deliver real products.
+
+## Services
+
+- LLM-powered web application development
+- AI Agents with tool-calling and RAG pipelines
+- Full-stack development (Next.js, TypeScript, Node.js, Python)
+- Cloud-native architecture (GCP Cloud Run, Cloud SQL, Docker)
+- Data pipelines and automation
+- Performance testing and optimization
+
+## Products
+
+- Vibe Coding App Builder: AI-native development service for shipping production-ready applications
+
+## Portfolio
+
+- SuburbIntel (https://suburbintel.com) — Property analytics platform with LLM-powered suburb insights
+- PDFEdit4U (https://pdfedit4u.com) — Production-ready PDF editing tool (merge, compress)
+
+## Pricing
+
+- Starter: $2,499 per project — MVPs, landing pages, 1-2 week delivery
+- Pro: $5,999 per project — Full apps with AI integrations, 3-4 week delivery
+- Enterprise: $12,999+ per project — Complex AI platforms, RAG, agents, 6-8 week delivery
+
+## Contact
+
+Website: https://www.quantumleapventures.com.au
+Contact form: https://www.quantumleapventures.com.au/contact
+
+## Pages
+
+- Home: https://www.quantumleapventures.com.au/
+- Vibe Coding: https://www.quantumleapventures.com.au/products/app-builder
+- Portfolio: https://www.quantumleapventures.com.au/portfolio
+- Pricing: https://www.quantumleapventures.com.au/pricing
+- About: https://www.quantumleapventures.com.au/about
+- Contact: https://www.quantumleapventures.com.au/contact
