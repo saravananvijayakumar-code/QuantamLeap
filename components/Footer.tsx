@@ -6,6 +6,7 @@ const FOOTER_LINKS = [
   { label: "Products", href: ROUTES.appBuilder },
   { label: "Portfolio", href: ROUTES.portfolio },
   { label: "Pricing", href: ROUTES.pricing },
+  { label: "Blog", href: ROUTES.blog },
   { label: "About", href: ROUTES.about },
   { label: "Contact", href: ROUTES.contact },
 ];

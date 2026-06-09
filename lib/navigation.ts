@@ -15,6 +15,7 @@ export const ROUTES = {
   appBuilder: "/products/app-builder",
   portfolio: "/portfolio",
   pricing: "/pricing",
+  blog: "/blog",
   about: "/about",
   contact: "/contact",
 } as const;
