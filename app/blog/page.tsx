@@ -1,10 +1,14 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { generateBreadcrumbJsonLd } from "@/lib/structured-data/breadcrumb";
+import { generatePageMetadata } from "@/lib/metadata/generate-metadata";
+import { BASE_URL } from "@/lib/metadata/constants";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Blog | Quantum Leap Ventures",
-  description: "Insights and case studies from Quantum Leap Ventures",
-};
+  description: "Case studies and insights from building real products at Quantum Leap Ventures.",
+  path: "/blog",
+});
 
 const BLOG_POSTS = [
   {
@@ -26,6 +30,7 @@ const BLOG_POSTS = [
 export default function BlogPage() {
   return (
     <main className="min-h-screen bg-dark-primary">
+      <JsonLd data={generateBreadcrumbJsonLd([{ name: "Home", url: BASE_URL }, { name: "Blog", url: BASE_URL + "/blog" }])} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <h1 className="text-4xl sm:text-5xl font-bold text-[#f0f0f0] mb-4">
           <span className="text-neon-cyan">Blog</span>

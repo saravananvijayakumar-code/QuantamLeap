@@ -1,16 +1,67 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/metadata/generate-metadata";
+import { generateArticleJsonLd } from "@/lib/structured-data/article";
+import { generateBreadcrumbJsonLd } from "@/lib/structured-data/breadcrumb";
+import { JsonLd } from "@/components/JsonLd";
+import { OrganizationData } from "@/lib/structured-data/types";
+import { BASE_URL } from "@/lib/metadata/constants";
 
-export const metadata: Metadata = {
-  title:
-    "We Built a Privacy-First PDF Editor That Never Touches Your Files | Quantum Leap Ventures",
-  description:
-    "How Quantum Leap Ventures built PDFEdit4U — a browser-based PDF editor that processes all documents locally with zero server uploads. Technical case study.",
+const ORGANIZATION: OrganizationData = {
+  name: "Quantum Leap Ventures",
+  url: "https://www.quantumleapventures.com.au",
+  logo: "https://www.quantumleapventures.com.au/logo.png",
+  description: "Building the future with innovative technology solutions.",
+  founder: {
+    name: "Saravanan Vijayakumar",
+    jobTitle: "Founder & CEO",
+    sameAs: ["https://www.linkedin.com/in/saravananvijayakumar/"],
+  },
+  foundingDate: "2024",
+  contactPoint: {
+    contactType: "customer service",
+    url: "https://www.quantumleapventures.com.au/contact",
+    availableLanguage: "English",
+  },
+  sameAs: ["https://www.linkedin.com/company/quantum-leap-ventures-au/"],
 };
 
+export const metadata = generatePageMetadata({
+  title: "We Built a Privacy-First PDF Editor | Quantum Leap Ventures",
+  description:
+    "How Quantum Leap Ventures built PDFEdit4U — a browser-based PDF editor that processes all documents locally.",
+  path: "/blog/we-built-privacy-first-pdf-editor",
+  ogType: "article",
+});
+
 export default function PdfEditorBlogPost() {
+  const articleJsonLd = generateArticleJsonLd(
+    {
+      headline:
+        "We Built a Privacy-First PDF Editor That Never Touches Your Files",
+      description:
+        "How Quantum Leap Ventures engineered PDFEdit4U — a browser-based document tool where every operation happens on the user's device.",
+      datePublished: "2025-06-01",
+      dateModified: "2025-06-01",
+      canonicalUrl: `${BASE_URL}/blog/we-built-privacy-first-pdf-editor`,
+      speakableSelectors: ["article h1", "article header p"],
+    },
+    ORGANIZATION
+  );
+
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", url: BASE_URL },
+    { name: "Blog", url: `${BASE_URL}/blog` },
+    {
+      name: "We Built a Privacy-First PDF Editor",
+      url: `${BASE_URL}/blog/we-built-privacy-first-pdf-editor`,
+    },
+  ]);
+
   return (
-    <main className="min-h-screen bg-dark-primary">
+    <>
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      <main className="min-h-screen bg-dark-primary">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Back link */}
         <Link
@@ -227,5 +278,6 @@ export default function PdfEditorBlogPost() {
         </div>
       </article>
     </main>
+    </>
   );
 }

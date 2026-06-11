@@ -1,0 +1,285 @@
+# Quantum Leap Ventures
+
+> AI-native software development studio building production-ready, LLM-powered web applications for businesses in Australia and globally.
+
+## Company Overview
+
+Quantum Leap Ventures is an Australian software company founded in 2024, specializing in rapid application development using AI-native methodologies. The company leverages large language models (Claude, OpenAI GPT-4, and Google Gemini) as core development tools to ship production-grade web applications significantly faster than traditional development approaches.
+
+The company operates under the "Vibe Coding" methodology — a development philosophy that treats AI language models as collaborative engineering partners rather than simple code generators. This approach enables delivery of complex, full-stack applications in weeks rather than months while maintaining production-quality standards.
+
+Website: https://www.quantumleapventures.com.au
+Location: Australia
+Founded: 2024
+Industry: Software Development, AI/ML Applications
+
+## Founder
+
+### Saravanan Vijayakumar
+
+Saravanan Vijayakumar is the Founder and CEO of Quantum Leap Ventures. He brings over 14 years of professional experience in performance testing and software reliability engineering, ensuring software systems operate correctly at scale across enterprise environments.
+
+His career spans work with large-scale systems requiring rigorous testing methodologies, load analysis, and performance optimization. This deep background in quality assurance and system reliability informs the engineering standards applied at Quantum Leap Ventures — every application built is designed for production workloads from day one.
+
+Saravanan now applies his expertise to building innovative applications through Vibe Coding, combining his systems engineering background with modern AI-powered development tools to deliver robust, scalable software products.
+
+LinkedIn: https://www.linkedin.com/in/saravananvijayakumar/
+
+## Services
+
+Quantum Leap Ventures offers end-to-end software development services with a focus on AI-powered applications. All projects are delivered as fixed-price engagements with clear timelines and deliverables.
+
+### Vibe Coding App Builder
+
+The flagship service offering. AI-native application development that uses Claude, OpenAI, and Gemini as core development tools to ship production-ready web applications rapidly. This is not prototyping — the output is production-grade code deployed to cloud infrastructure.
+
+### LLM-Powered Application Development
+
+Custom applications with integrated large language model capabilities including:
+- Natural language interfaces and conversational UIs
+- Document processing and content analysis
+- Intelligent search with semantic understanding
+- Automated content generation and summarization
+
+### AI Agents and RAG Pipelines
+
+Development of autonomous AI agents with tool-calling capabilities and Retrieval-Augmented Generation pipelines for building intelligent, context-aware applications. This includes vector database integration, embedding generation, and prompt engineering for specific business domains.
+
+### Full-Stack Web Development
+
+End-to-end development using modern web technologies:
+- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Backend: Node.js, Python, REST APIs
+- Database: PostgreSQL, Prisma ORM
+- Authentication and user management
+- Responsive design for all device sizes
+
+### Cloud-Native Architecture
+
+Applications built for scale on Google Cloud Platform:
+- Google Cloud Run with auto-scaling containers
+- Cloud SQL for managed databases
+- Docker containerization
+- CI/CD pipelines via GitHub Actions
+- Infrastructure designed for real-world traffic patterns
+
+### Data Pipelines and Automation
+
+Custom data engineering solutions:
+- ETL pipeline development
+- Data ingestion from multiple sources
+- Automated transformation and processing
+- Scheduled jobs and event-driven workflows
+- Integration with government and third-party data APIs
+
+## Portfolio
+
+### SuburbIntel — Australian Property Intelligence Platform
+
+**URL:** https://suburbintel.com
+**Status:** Live, free for all users
+
+SuburbIntel is a full-stack property analytics platform covering over 14,500 Australian suburbs. It integrates real government data sources to deliver investment analytics, scoring, and market insights for property investors and first-home buyers.
+
+#### Technical Details
+
+- **Framework:** Next.js 15 (App Router), React 18, TypeScript
+- **Database:** PostgreSQL with Prisma ORM (30+ data models)
+- **Hosting:** Google Cloud Run with auto-scaling (1-10 instances)
+- **AI:** OpenAI GPT-4 for suburb summaries, investment analysis, and buyer persona generation
+- **Data Sources:** 5 government databases including ABS Census 2021 (1.4GB+ across 119 tables), NSW Valuer-General, VIC Open Data, infrastructure databases, and development applications
+- **Security:** Database-backed rate limiting, input sanitization (XSS, SQL injection, CSV injection, path traversal), AI prompt injection detection (30+ attack patterns)
+- **Testing:** 13 Playwright E2E test suites, cross-browser testing, Zod schema validation across 50+ API routes
+- **Scale:** 44+ pages, 50+ API endpoints, 14,500+ suburbs indexed
+
+#### Key Features
+
+- Interactive heatmaps showing investment potential across Australian regions
+- Suburb comparison tools for side-by-side analysis
+- Investment calculators for yield, growth, and affordability
+- Real-time market analytics and trend visualizations
+- Proprietary investment scoring engine (0-100) with weighted algorithms
+- AI-powered suburb summaries and buyer persona generation
+- RAG system with vector embeddings for contextual property Q&A
+- Real estate agent marketplace with featured placements and lead management
+
+### PDFEdit4U — Privacy-First Browser-Based PDF Editor
+
+**URL:** https://www.pdfedit4u.com
+**Status:** Live, free to use
+
+PDFEdit4U is a full-featured PDF editor that runs entirely inside the web browser. All document processing happens client-side — files never leave the user's device. This makes it architecturally impossible for documents to be intercepted, stored, or accessed by third parties.
+
+#### Technical Details
+
+- **Framework:** React with TypeScript
+- **PDF Processing:** pdf-lib (creation/modification), PDF.js (rendering/extraction)
+- **Image Processing:** Canvas API with configurable DPI
+- **Offline:** Service workers for full offline capability
+- **Deployment:** Progressive Web App on Google Cloud Run
+- **Architecture:** Zero upload endpoints, no file storage, no processing queue
+
+#### Key Features
+
+- Full PDF editor with annotations, highlights, drawings, text boxes, signatures, and stamps
+- Merge, split, compress, and rotate PDF documents
+- PDF to JPG/PNG conversion with quality and DPI controls
+- JPG to PDF with drag-to-reorder image sequencing
+- PDF to Text with Markdown extraction mode (reduces AI token usage by 15-30%)
+- Add page numbers with configurable position, format, and font size
+- Crop PDF with visual overlay and draggable edge handles
+- Flatten PDF (converts form fields to static content)
+- Lazy-loaded tool pages for fast initial load
+- Works completely offline after first load
+
+#### Privacy Architecture
+
+When a user selects a file, the browser's File API reads it into local memory. JavaScript processes the data using pdf-lib and PDF.js. The result is packaged as a Blob and offered for download via a temporary object URL. After download, the URL is revoked and memory is released. There is no upload endpoint, no file storage, no database entry for user documents.
+
+## Pricing
+
+All prices are in Australian Dollars (AUD). All projects are fixed-price with no hourly billing.
+
+### Starter — $2,499 per project
+
+Ideal for MVPs and landing pages.
+
+Includes:
+- Single-page or simple multi-page application
+- Responsive design (mobile and desktop)
+- Basic hosting setup (Vercel or GCP)
+- 1 round of revisions
+- Delivery in 1-2 weeks
+- Full source code handover
+
+### Pro — $5,999 per project
+
+Full-featured web applications with AI integrations.
+
+Includes:
+- Multi-page application with dynamic features
+- LLM integration (Claude, OpenAI, or Gemini)
+- Database and API development
+- Cloud deployment (GCP Cloud Run)
+- Authentication and user management
+- 3 rounds of revisions
+- Delivery in 3-4 weeks
+- 30 days post-launch support
+
+### Enterprise — $12,999+ per project
+
+Complex AI platforms with custom pipelines and full-stack architecture.
+
+Includes:
+- AI agents with tool-calling and RAG
+- Custom data pipelines and automation
+- Multi-service cloud architecture
+- Advanced security and compliance
+- CI/CD pipeline setup
+- Performance testing and optimization
+- Unlimited revisions during build
+- Delivery in 6-8 weeks
+- 90 days post-launch support
+- Dedicated Slack channel
+
+## Technology Stack
+
+### Frontend
+- Next.js 15 (App Router)
+- React 18
+- TypeScript
+- Tailwind CSS
+- Three.js (3D graphics)
+
+### Backend
+- Node.js
+- Python
+- REST APIs
+- Zod schema validation
+
+### Database
+- PostgreSQL
+- Prisma ORM
+- Supabase
+
+### AI and Machine Learning
+- Claude (Anthropic)
+- OpenAI GPT-4
+- Google Gemini
+- RAG pipelines
+- Vector embeddings
+- Prompt engineering
+
+### Cloud Infrastructure
+- Google Cloud Platform
+- Google Cloud Run (auto-scaling containers)
+- Cloud SQL
+- Docker
+- Artifact Registry
+
+### DevOps and CI/CD
+- GitHub Actions
+- Automated testing pipelines
+- Multi-stage Docker builds
+- Smoke tests on deployment
+
+### Testing
+- Playwright (E2E testing)
+- Vitest (unit and property-based testing)
+- fast-check (property-based testing)
+- Cross-browser testing
+
+## Contact
+
+- **Website:** https://www.quantumleapventures.com.au
+- **Contact Form:** https://www.quantumleapventures.com.au/contact
+- **LinkedIn (Company):** https://www.linkedin.com/company/quantum-leap-ventures-au/
+- **LinkedIn (Founder):** https://www.linkedin.com/in/saravananvijayakumar/
+
+## Frequently Asked Questions
+
+### What is Vibe Coding?
+
+Vibe Coding is Quantum Leap Ventures' AI-native development methodology. It uses large language models (Claude, OpenAI, and Gemini) as core development tools to ship production-ready web applications rapidly and reliably. Unlike traditional development, AI models serve as collaborative engineering partners throughout the entire development lifecycle.
+
+### How long does it take to build an app?
+
+Depending on complexity: 1-2 weeks for MVPs (Starter tier), 3-4 weeks for full applications with AI integrations (Pro tier), and 6-8 weeks for complex AI platforms with custom pipelines (Enterprise tier). The AI-native approach dramatically compresses traditional development timelines.
+
+### What technologies do you use?
+
+The primary stack includes Next.js, TypeScript, React, Python, Node.js, PostgreSQL, and Google Cloud Platform. For AI features: Claude, OpenAI GPT-4, and Gemini. Infrastructure runs on GCP Cloud Run with Docker, GitHub Actions CI/CD, and Prisma ORM for database management.
+
+### Do you provide post-launch support?
+
+Yes. The Pro tier includes 30 days of post-launch support and the Enterprise tier includes 90 days. Support covers bug fixes, performance monitoring, and iterative improvements to ensure applications continue performing well in production.
+
+### Do you charge hourly?
+
+No. All projects are fixed-price. The total cost is agreed upfront before work begins. There are no surprise hourly charges or hidden fees.
+
+### What is included in the source code handover?
+
+All tiers include complete source code ownership. You receive the full codebase, deployment configurations, documentation, and everything needed to maintain and extend the application independently.
+
+### Can you build AI-powered applications?
+
+Yes. This is a core specialty. Services include LLM integration, AI agents with tool-calling, RAG (Retrieval-Augmented Generation) pipelines, vector database integration, and custom AI features tailored to specific business needs.
+
+### Where are you located?
+
+Quantum Leap Ventures is an Australian company. All communication and project management can be handled remotely, serving clients in Australia and internationally.
+
+## Site Pages
+
+- Home: https://www.quantumleapventures.com.au/
+- Products (Vibe Coding): https://www.quantumleapventures.com.au/products/app-builder
+- Portfolio: https://www.quantumleapventures.com.au/portfolio
+- Pricing: https://www.quantumleapventures.com.au/pricing
+- About: https://www.quantumleapventures.com.au/about
+- Blog: https://www.quantumleapventures.com.au/blog
+- Contact: https://www.quantumleapventures.com.au/contact
+
+## Extended Content Reference
+
+For a concise summary of this content, see: https://www.quantumleapventures.com.au/llms.txt

@@ -43,3 +43,9 @@ Contact form: https://www.quantumleapventures.com.au/contact
 - Pricing: https://www.quantumleapventures.com.au/pricing
 - About: https://www.quantumleapventures.com.au/about
 - Contact: https://www.quantumleapventures.com.au/contact
+
+## Extended Content
+
+For comprehensive information about Quantum Leap Ventures including detailed case studies, technical architecture, and complete service descriptions, see the full content file:
+
+- Full content: https://www.quantumleapventures.com.au/llms-full.txt

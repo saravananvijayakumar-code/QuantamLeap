@@ -1,16 +1,66 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/metadata/generate-metadata";
+import { generateArticleJsonLd } from "@/lib/structured-data/article";
+import { generateBreadcrumbJsonLd } from "@/lib/structured-data/breadcrumb";
+import { OrganizationData } from "@/lib/structured-data/types";
+import { JsonLd } from "@/components/JsonLd";
+import { BASE_URL } from "@/lib/metadata/constants";
 
-export const metadata: Metadata = {
-  title:
-    "Building SuburbIntel — Australian Property Intelligence Platform | Quantum Leap Ventures",
+export const metadata = generatePageMetadata({
+  title: "Building SuburbIntel — Australian Property Intelligence",
   description:
-    "A deep dive into building SuburbIntel, a full-stack property analytics platform covering 14,500+ Australian suburbs with real government data and AI-powered insights.",
+    "How we built a full-stack property analytics platform covering 14,500+ Australian suburbs.",
+  path: "/blog/building-suburbintel-australian-property-intelligence",
+  ogType: "article",
+});
+
+const ORGANIZATION: OrganizationData = {
+  name: "Quantum Leap Ventures",
+  url: "https://www.quantumleapventures.com.au",
+  logo: "https://www.quantumleapventures.com.au/logo.png",
+  description: "Building the future with innovative technology solutions.",
+  founder: {
+    name: "Saravanan Vijayakumar",
+    jobTitle: "Founder & CEO",
+    sameAs: ["https://www.linkedin.com/in/saravananvijayakumar/"],
+  },
+  foundingDate: "2024",
+  contactPoint: {
+    contactType: "customer service",
+    url: "https://www.quantumleapventures.com.au/contact",
+    availableLanguage: "English",
+  },
+  sameAs: ["https://www.linkedin.com/company/quantum-leap-ventures-au/"],
 };
+
+const articleJsonLd = generateArticleJsonLd(
+  {
+    headline:
+      "Building SuburbIntel — An Australian Property Intelligence Platform",
+    description:
+      "How we built a full-stack property analytics platform covering 14,500+ Australian suburbs with real government data and AI-powered insights.",
+    datePublished: "2025-06-01",
+    dateModified: "2025-06-01",
+    canonicalUrl: `${BASE_URL}/blog/building-suburbintel-australian-property-intelligence`,
+    speakableSelectors: ["article h1", "article header p"],
+  },
+  ORGANIZATION
+);
+
+const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+  { name: "Home", url: BASE_URL },
+  { name: "Blog", url: `${BASE_URL}/blog` },
+  {
+    name: "Building SuburbIntel",
+    url: `${BASE_URL}/blog/building-suburbintel-australian-property-intelligence`,
+  },
+]);
 
 export default function SuburbIntelBlogPost() {
   return (
     <main className="min-h-screen bg-dark-primary">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Back link */}
         <Link

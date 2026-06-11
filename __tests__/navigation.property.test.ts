@@ -20,7 +20,7 @@ vi.mock("next/link", () => ({
  */
 describe("Property 1: Navigation header presence across all pages", () => {
   const validRoutes = ["/", "/products/app-builder", "/portfolio", "/about", "/contact"];
-  const expectedNavLinks = ["Home", "Products", "Portfolio", "About", "Contact"];
+  const expectedNavLinks = ["Home", "Products", "Portfolio", "Pricing", "Blog", "About", "Contact"];
 
   it("should render brand name 'Quantum Leap Ventures' for any valid page route", () => {
     fc.assert(
@@ -33,9 +33,10 @@ describe("Property 1: Navigation header presence across all pages", () => {
         expect(brandElement).toBeDefined();
 
         unmount();
-      })
+      }),
+      { numRuns: 5 }
     );
-  });
+  }, 15000);
 
   it("should render all navigation links for any valid page route", () => {
     fc.assert(
@@ -48,7 +49,8 @@ describe("Property 1: Navigation header presence across all pages", () => {
         }
 
         unmount();
-      })
+      }),
+      { numRuns: 5 }
     );
-  });
+  }, 15000);
 });

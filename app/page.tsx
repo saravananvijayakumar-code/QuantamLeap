@@ -1,9 +1,36 @@
 import Link from "next/link";
 import { HeroScene } from "@/components/HeroScene";
+import { generatePageMetadata } from "@/lib/metadata/generate-metadata";
+import { JsonLd } from "@/components/JsonLd";
+import { generateWebSiteJsonLd } from "@/lib/structured-data/website";
+
+export const metadata = generatePageMetadata({
+  title: "Quantum Leap Ventures | Innovative Technology Solutions",
+  description:
+    "Quantum Leap Ventures builds next-generation digital products from powerful app builders to intelligent platforms.",
+  path: "/",
+});
+
+const websiteJsonLd = generateWebSiteJsonLd({
+  name: "Quantum Leap Ventures",
+  url: "https://www.quantumleapventures.com.au",
+});
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <JsonLd data={websiteJsonLd} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["h1", ".hero-description"],
+          },
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-hero">
         {/* 3D Background with floating geometric shapes and particle effects */}
@@ -14,10 +41,10 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold text-glow-cyan text-white mb-6">
             Building the Future with Technology
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl 2xl:text-3xl text-[#f0f0f0] mb-4 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl 2xl:text-3xl text-[#f0f0f0] mb-4 max-w-2xl mx-auto hero-description">
             Quantum Leap Ventures — Pioneering Innovative Solutions
           </p>
-          <p className="text-base sm:text-lg 2xl:text-xl text-[#a0a0b0] mb-10 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg 2xl:text-xl text-[#a0a0b0] mb-10 max-w-xl mx-auto hero-description">
             We design and build next-generation digital products — from powerful
             app builders to intelligent platforms — helping businesses leap into
             the future.
